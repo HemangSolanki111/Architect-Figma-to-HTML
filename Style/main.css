@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+*,
+*::after,
+*::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:active,
+:hover,
+:focus {
+    outline: 0 !important;
+    outline-offset: 0;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary-color) !important;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+/* variable define */
+:root {
+    --color-gyray: #BDBDBD;
+    --color-black: #333;
+    --bgcolor: #2C2C2C;
+    --primary-font: 'Roboto', sans-serif;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+/* 
+==================================
+        Custome CSS 
+==================================
+*/
+
+h1 {
+    font-size: 64px;
+    font-weight: 700;
+    color: #2C2C2C;
+    font-family: var(--primary-font);
+}
+
+
+h2 {
+    font-weight: 300;
+    font-size: 64px;
+    color: #BDBDBD;
+    font-family: var(--primary-font);
+}
+
+h3 {
+    color: #333;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h4 {
+    color: #BDBDBD;
+    font-family: Roboto;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+h5 {
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+h6 {
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 171.429% */
+    letter-spacing: 0.42px;
+}
+
+p {
+    font-size: 16px;
+    color: #000;
+    font-weight: 300;
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+button {
+    background-color: #333;
+    /* width: 150px; */
+    height: 40px;
+    border: none;
+    box-shadow: none;
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    /* 100% */
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+}
+
+ul li {
+    list-style: none;
+}
+/* 
+==================================
+        Header Design 
+==================================
+*/
+header {
+    height: 100px;
+}
+
+.navigation-wrap {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.navigation-wrap .nav-item {
+    padding: 0 0.625rem;
+    transition: all 0.3s linear;
+}
+
+.navbar-toggler:focus {
+    outline: unset;
+    border: unset;
+    box-shadow: none;
+    border: none;
+}
+
+.nav-link {
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+    /* 100% */
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color) !important;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
+
+
+/* change navbar style on scroll */
+
+.navigation-wrap.scroll-on {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.486);
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0.125rem 1.75rem 0 rgba(0, 0, 0, 0.281);
+    transition: all 0.15s ease-in-out 0s;
+}
+
+.navigation-wrap.scroll-on .nav-link {
+    color: var(--bgcolor);
+
+}
+
+.navigation-wrap.scroll-on .nav-link:hover,
+.navigation-wrap.scroll-on .nav-link:active {
+    color: var(--color-black);
+}
+
+@media only screen and (max-width:480px) { 
+    .navigation-wrap.scroll-on .nav-link {
+        text-align: center !important;
+    }
+}
+
+
+/* 
+===================================
+    About design
+===================================
+*/
+@media only screen and (max-width:480px) {
+    #aboutimg {
+        text-align: center !important;
+    }
+}
+
+/* 
+=================================
+   sec 3 main Focus
+=================================
+*/
+@media only screen and (max-width:480px) {
+    .main_focus h2 {
+        font-size: 40px !important;
+    }
+
+    .main_focus .row {
+        padding-left: 10px !important;
+    }
+}
+
+/* 
+=================================
+   sec 4 Our Project
+=================================
+*/
+.our-project .sample_project {
+    background: url(../img/Rectangle\ 12.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 255px;
+}
+
+.our-project .sample_project:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .5);
+}
+
+@media only screen and (max-width:480px) {
+    .our-project {
+        text-align: center !important;
+    }
+
+    .our-project img {
+        margin-top: 10px !important;
+    }
+}
+
+/* 
+=================================
+    Contact From section 
+=================================
+*/
+.contact form input {
+    width: 391px;
+    height: 46px;
+    background: #F3F3F3;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 2px;
+}
+
+@media only screen and (max-width:480px) {
+    .contact form input {
+        width: 100%;
+        height: 46px;
+    }
+}
+/* 
+=================================
+    Footer section 
+=================================
+*/
+
+footer {
+    background: #2C2C2C;
+}
+
+footer .social-icon i{
+    color: white !important;
+    font-size: 15px;
+}
+
+footer .footer-down p {
+    text-align: center !important;
+    padding-top: 20px;
+    color: gray;
+    border-top: 1px solid;
+}
+
+@media only screen and (max-width:480px) {
+    footer .container {
+        text-align: center !important;
+    }
+
+    footer .container .col-md-3 {
+        margin-top: 10%!important;
+    }
+
+    footer ul li {
+        line-height: normal !important;
+    }
+
+}
+
+
+/* 
+=================================
+=================================
+
+    GALLARY PAGE 
+
+=================================
+=================================
+*/
+.gallary img {
+    transition: 0.3s ease all;
+}
+
+.gallary img:hover {
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width:480px) {
+    .gallary img{
+        margin-top: 2% !important;
+    }
+}
+
+
+/* 
+=================================
+=================================
+
+    PROJECTS PAGE 
+
+=================================
+=================================
+*/
